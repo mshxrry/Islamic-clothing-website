@@ -23,6 +23,18 @@ namespace Islamic_clothing_website.Controllers
             return View();
         }
 
+        public IActionResult Fragrances()
+        {
+            return View();
+        }
+        public IActionResult Essentials()
+        {
+            return View();
+        }
+        public IActionResult Clothing()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
