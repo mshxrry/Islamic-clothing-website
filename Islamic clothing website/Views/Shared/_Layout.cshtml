@@ -7,265 +7,134 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Islamic_clothing_website.styles.css" asp-append-version="true" />
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-        }
-
-            .navbar a {
-                float: left;
-                font-size: 16px;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-        .clothing {
-            float: left;
-            overflow: hidden;
-        }
-
-            .clothing .dropbtn {
-                font-size: 16px;
-                border: none;
-                outline: none;
-                color: black;
-                padding: 14px 16px;
-                background-color: inherit;
-                font-family: inherit;
-                margin: 0;
-            }
-
-            .navbar a:hover, .clothing:hover .dropbtn {
-                background-color: lightgreen;
-            }
-
-        .clothing-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-            .clothing-content a {
-                float: none;
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-
-                .clothing-content a:hover {
-                    background-color: #ddd;
-                }
-
-        .clothing:hover .clothing-content {
-            display: block;
-        }
-        </style>
-        <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-        }
-
-            .navbar a {
-                float:left;
-                font-size: 16px;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-        .fragrances {
-            float:left;
-            overflow: hidden;
-        }
-
-            .fragrances size:16px;
-                border: none;
-                outline: none;
-                color: black;
-                padding:14px 16px;
-                background-color: inherit;
-                font-family: inherit;
-                margin:0;
-            }
-
-            .navbar a:hover, .fragrances:hover .dropbtn {
-                background-color: lightgreen;
-            }
-
-        .fragrances-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-            .fragrances-content a {
-                float: none;
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-
-                .fragrances-content a:hover {
-                    background-color: #ddd;
-                }
-
-        .fragrances:hover .fragrances-content {
-            display: block;
-        }
-        </style>
-        <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-        }
-
-            .navbar a {
-                float: right;
-                font-size: 16px;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-        .essentials {
-            float: right;
-            overflow: hidden;
-        }
-
-            .essentials size:16px;
-            border: none;
-            outline :none;
-            color: black;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family :inherit;
-            margin:0;
-        }
-
-        .navbar a:hover, .esssentials:hover .dropbtn {
-            background-color: lightgreen;
-        }
-
-        .essentials-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-            .essentials-content a {
-                float: none;
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-
-                .essentials-content a:hover {
-                    background-color: #ddd;
-                }
-
-        .essentials:hover .essentials-content {
-            display: block;
-        }
-    </style>
+    
 </head>
 <body>
 
     <header>
-        <div class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Islamic Attires</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: lightgreen;">
+                    <div class="container-fluid">
+                           <a class="navbar-brand fw-bold" href="#" style="color: black;">Islamic Attires</a>
+                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                    
                 </button>
-                
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-
-                        <div class="clothing">
-                            <button class="dropbtn">
-                                Clothing
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                            <nav class="clothing-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </nav>
-                            </div>
-
-                            <div class="fragrances">
-                                <button class="dropbtn">
-                                    Fragrances
-                                    <i class="fa fa-caret-down"></i>
-                                </button>
-                                <nav class="fragrances-content">
-                                    <a href="#">more 1</a>
-                                    <a href="#">more 2</a>
-                                    <a href="#">more 3</a>
-                                </nav>
-                                </div> 
-
-                        <div class="essentials">
-                            <button class="dropbtn">
-                                Essentials
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                            <nav class="essentials-content">
-                                <a href="#">e 1</a>
-                                <a href="#">e 2</a>
-                                <a href="#">e 3</a>
-                            </nav>
-                        </div>
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                                                    <a class="nav-link" aria-current="page" href="#" style="color: black;">Home</a>
+                            
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DelieveryInformation">Delievery Information</a>
-                           </li>
-
-
+                                                    <a class="nav-link" href="#" style="color: black;">Link</a>
+                            
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                                                            Dropdown
+                                
+                            </a>
+                            
+                            <ul class="dropdown-menu">
+                                
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                
+                                <li>
+                                                                    <hr class="dropdown-divider">
+                                    
+                                </li>
+                                
+                                <li class="nav-item dropend">
+                                                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="clothing" aria-expanded="false">
+                                                                           Dropd
+                                        
+                                    </a>
+                                    
+                                    <ul class="dropdown-menu">
+                                        
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        
+                                        <li>
+                                                                                    <hr class="dropdown-divider">
+                                            
+                                        </li>
+                                        
+                                        <li class="nav-item dropend">
+                                                                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                            Dropdown
+                                                
+                                            </a>
+                                            
+                                            <ul class="dropdown-menu">
+                                                
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                
+                                                <li>
+                                                                                                    <hr class="dropdown-divider">
+                                                    
+                                                </li>
+                                                
+                                                <li class="nav-item dropend">
+                                                                                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                                            Dropdown
+                                                        
+                                                    </a>
+                                                    
+                                                    <ul class="dropdown-menu">
+                                                        
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        
+                                                        <li>
+                                                                                                                    <hr class="dropdown-divider">
+                                                            
+                                                        </li>
+                                                        
+                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        
+                                                    </ul>
+                                                    
+                                                </li>
+                                                
+                                            </ul>
+                                            
+                                        </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                        
+                        <li class="nav-item">
+                                                   <a class="nav-link" style="color: black;">Link</a>
+                            
+                        </li>
+                        
                     </ul>
+                                   <form class="d-flex" role="search">
+                                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                          <button class="btn btn-outline-light" type="submit">Search</button>
+                       
+                    </form>
+                    
                 </div>
+                
             </div>
-        </div>
+            
+        </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
