@@ -20,7 +20,7 @@
             .navbar a {
                 float: left;
                 font-size: 16px;
-                color: white;
+                color: black;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
@@ -35,7 +35,7 @@
                 font-size: 16px;
                 border: none;
                 outline: none;
-                color: white;
+                color: black;
                 padding: 14px 16px;
                 background-color: inherit;
                 font-family: inherit;
@@ -71,12 +71,140 @@
         .clothing:hover .clothing-content {
             display: block;
         }
+        </style>
+        <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .navbar a {
+                float:left;
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .fragrances {
+            float:left;
+            overflow: hidden;
+        }
+
+            .fragrances size:16px;
+                border: none;
+                outline: none;
+                color: black;
+                padding:14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin:0;
+            }
+
+            .navbar a:hover, .fragrances:hover .dropbtn {
+                background-color: lightgreen;
+            }
+
+        .fragrances-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .fragrances-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .fragrances-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .fragrances:hover .fragrances-content {
+            display: block;
+        }
+        </style>
+        <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .navbar a {
+                float: right;
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .essentials {
+            float: right;
+            overflow: hidden;
+        }
+
+            .essentials size:16px;
+            border: none;
+            outline :none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family :inherit;
+            margin:0;
+        }
+
+        .navbar a:hover, .esssentials:hover .dropbtn {
+            background-color: lightgreen;
+        }
+
+        .essentials-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .essentials-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .essentials-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .essentials:hover .essentials-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Islamic Attires</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -95,18 +223,37 @@
                                 Clothing
                                 <i class="fa fa-caret-down"></i>
                             </button>
-                            <div class="clothing-content">
+                            <nav class="clothing-content">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
                                 <a href="#">Link 3</a>
+                            </nav>
                             </div>
+
+                            <div class="fragrances">
+                                <button class="dropbtn">
+                                    Fragrances
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <nav class="fragrances-content">
+                                    <a href="#">more 1</a>
+                                    <a href="#">more 2</a>
+                                    <a href="#">more 3</a>
+                                </nav>
+                                </div> 
+
+                        <div class="essentials">
+                            <button class="dropbtn">
+                                Essentials
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <nav class="essentials-content">
+                                <a href="#">e 1</a>
+                                <a href="#">e 2</a>
+                                <a href="#">e 3</a>
+                            </nav>
+                        </div>
                         
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Fragrances">Fragrances</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Essentials">Essentials</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
                         </li>
@@ -118,7 +265,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
