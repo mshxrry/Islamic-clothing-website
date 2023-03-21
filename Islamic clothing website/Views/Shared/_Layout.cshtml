@@ -26,12 +26,12 @@
                 text-decoration: none;
             }
 
-        .dropdown {
+        .clothing {
             float: left;
             overflow: hidden;
         }
 
-            .dropdown .dropbtn {
+            .clothing .dropbtn {
                 font-size: 16px;
                 border: none;
                 outline: none;
@@ -42,11 +42,11 @@
                 margin: 0;
             }
 
-            .navbar a:hover, .dropdown:hover .dropbtn {
-                background-color: red;
+            .navbar a:hover, .clothing:hover .dropbtn {
+                background-color: lightgreen;
             }
 
-        .dropdown-content {
+        .clothing-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
@@ -55,7 +55,7 @@
             z-index: 1;
         }
 
-            .dropdown-content a {
+            .clothing-content a {
                 float: none;
                 color: black;
                 padding: 12px 16px;
@@ -64,11 +64,11 @@
                 text-align: left;
             }
 
-                .dropdown-content a:hover {
+                .clothing-content a:hover {
                     background-color: #ddd;
                 }
 
-        .dropdown:hover .dropdown-content {
+        .clothing:hover .clothing-content {
             display: block;
         }
     </style>
@@ -89,9 +89,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Clothing">Clothing</a>
-                        </li>
+
+                        <div class="clothing">
+                            <button class="dropbtn">
+                                Clothing
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="clothing-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Fragrances">Fragrances</a>
                         </li>
