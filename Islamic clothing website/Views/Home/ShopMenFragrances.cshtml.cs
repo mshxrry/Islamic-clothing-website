@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Islamic_clothing_website.Views.Home
 {
-    public class ClothingModel : PageModel
+    public class ShopMenFragrancesModel : PageModel
     {
         public void OnGet()
         {

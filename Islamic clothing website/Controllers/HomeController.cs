@@ -23,10 +23,41 @@ namespace Islamic_clothing_website.Controllers
             return View();
         }
 
-        public IActionResult Clothing()
+        public IActionResult About()
         {
             return View();
         }
+
+        public IActionResult PrayerMats()
+        {
+            return View();
+        }
+
+        public IActionResult MensCaps()
+        {
+            return View();
+        }
+
+        public IActionResult WomenHijabs()
+        {
+            return View();
+        }
+
+        public IActionResult OtherItems()
+        {
+            return View();
+        }
+
+        public IActionResult ShopMenFragrances()
+        {
+            return View();
+        }
+
+        public IActionResult ShopWomenFragrances()
+        {
+            return View();
+        }
+           
        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
