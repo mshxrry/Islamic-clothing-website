@@ -57,6 +57,16 @@ namespace Islamic_clothing_website.Controllers
         {
             return View();
         }
+
+        public IActionResult ShopMenClothing()
+        {
+            return View();
+        }
+
+        public IActionResult ShopWomenClothing()
+        {
+            return View();
+        }
            
        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
