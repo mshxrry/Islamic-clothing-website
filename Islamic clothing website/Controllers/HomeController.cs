@@ -12,7 +12,7 @@ namespace Islamic_clothing_website.Controllers
         {
             _logger = logger;
         }
-
+        /* This code creates seperate pages of the products */
         public IActionResult Index()
         {
             return View();

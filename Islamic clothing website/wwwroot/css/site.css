@@ -16,7 +16,7 @@ html {
 body {
   margin-bottom: 60px;
 }
-
+/* This code changes the width and height of carousel */
 .carousel-inner {
     width:1000px;
     height:1000px;
