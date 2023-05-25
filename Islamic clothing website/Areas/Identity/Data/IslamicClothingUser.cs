@@ -9,5 +9,7 @@ namespace Islamic_clothing_website.Areas.Identity.Data;
 // Add profile data for application users by adding properties to the IslamicClothingUser class
 public class IslamicClothingUser : IdentityUser
 {
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
 }
 
