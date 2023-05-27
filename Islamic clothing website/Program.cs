@@ -7,7 +7,7 @@ var connectionString = builder.Configuration.GetConnectionString("IslamicClothin
 builder.Services.AddDbContext<IslamicClothingContextDb>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IslamicClothingUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<IslamicClothingUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<IslamicClothingContextDb>();
 
 // Add services to the container.
