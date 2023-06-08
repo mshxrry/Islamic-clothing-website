@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Islamic_clothing_website.Models;
 
 namespace Islamic_clothing_website.Areas.Identity.Data;
 
@@ -31,4 +32,10 @@ public class IslamicClothingContextDb : IdentityDbContext<IslamicClothingUser>
             builder.Property(u => u.LastName).HasMaxLength(255);
         }
     }
+
+    public DbSet<Islamic_clothing_website.Models.Customer>? Customer { get; set; }
+
+    public DbSet<Islamic_clothing_website.Models.Order>? Order { get; set; }
+
+    public DbSet<Islamic_clothing_website.Models.Product>? Product { get; set; }
 }
