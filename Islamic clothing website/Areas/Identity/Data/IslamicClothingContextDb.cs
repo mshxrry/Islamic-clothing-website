@@ -38,4 +38,8 @@ public class IslamicClothingContextDb : IdentityDbContext<IslamicClothingUser>
     public DbSet<Islamic_clothing_website.Models.Order>? Order { get; set; }
 
     public DbSet<Islamic_clothing_website.Models.Product>? Product { get; set; }
+
+    public DbSet<Islamic_clothing_website.Models.Payment>? Payment { get; set; }
+
+    public DbSet<Islamic_clothing_website.Models.Delievery>? Delievery { get; set; }
 }
