@@ -26,7 +26,8 @@ namespace Islamic_clothing_website.Controllers
                            select s; 
             if (!String.IsNullOrEmpty(searchString))
             {
-                customers = customers.Where(s => s.FirstName!.Contains(searchString));
+                customers = customers.Where(s => s.FirstName!.Contains(searchString)
+                 || s.LastName.Contains(searchString));
             }
 
             return View(await customers.ToListAsync());
