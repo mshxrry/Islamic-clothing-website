@@ -20,8 +20,12 @@ namespace Islamic_clothing_website.Controllers
         }
 
         // GET: Customers
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString,
+            string sortOrder)
         {
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            
             var customers = from s in _context.Customer
                            select s; 
             if (!String.IsNullOrEmpty(searchString))
@@ -29,6 +33,18 @@ namespace Islamic_clothing_website.Controllers
                 customers = customers.Where(s => s.FirstName!.Contains(searchString)
                  || s.LastName.Contains(searchString));
             }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    customers = customers.OrderByDescending(s => s.LastName);
+                    break;
+               
+                
+                default:
+                    customers = customers.OrderBy(s => s.LastName);
+                    break;
+            }
+
 
             return View(await customers.ToListAsync());
         }

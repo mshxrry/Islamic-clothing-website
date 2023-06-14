@@ -19,16 +19,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FirstName)
+               FirstName
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastName)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">LastName</a>
+
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
+                PhoneNumber
+
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+               Email
             </th>
             <th></th>
         </tr>

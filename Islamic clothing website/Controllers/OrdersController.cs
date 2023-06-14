@@ -20,11 +20,17 @@ namespace Islamic_clothing_website.Controllers
         }
 
         // GET: Orders
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return _context.Order != null ?
-                        View(await _context.Order.ToListAsync()) :
-                        Problem("Entity set 'IslamicClothingContextDb.Order'  is null.");
+            var orders = from s in _context.Order
+                            select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                orders = orders.Where(s => s.OrderName!.Contains(searchString));
+               
+            }
+
+            return View(await orders.ToListAsync());
         }
 
         // GET: Orders/Details/5

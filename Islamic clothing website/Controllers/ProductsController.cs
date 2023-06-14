@@ -20,11 +20,17 @@ namespace Islamic_clothing_website.Controllers
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return _context.Product != null ?
-                        View(await _context.Product.ToListAsync()) :
-                        Problem("Entity set 'IslamicClothingContextDb.Product'  is null.");
+            var products = from m in _context.Product
+                         select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(m => m.CategoryName!.Contains(searchString));
+
+            }
+
+            return View(await products.ToListAsync());
         }
 
         // GET: Products/Details/5
