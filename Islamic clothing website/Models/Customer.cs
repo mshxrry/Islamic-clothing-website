@@ -8,6 +8,7 @@ namespace Islamic_clothing_website.Models
         public int CustomerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [DataType(DataType.PhoneNumber)]
         public int PhoneNumber { get; set; }
         public string Email { get; set; }
     }
