@@ -20,33 +20,45 @@ namespace Islamic_clothing_website.Controllers
         }
 
         // GET: Customers
-        public async Task<IActionResult> Index(string searchString,
-            string sortOrder)
+        public async Task<IActionResult> Index(
+      string sortOrder,
+      string currentFilter,
+      string searchString,
+      int? pageNumber)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
             var customers = from s in _context.Customer
-                           select s; 
+                           select s;
             if (!String.IsNullOrEmpty(searchString))
             {
-                customers = customers.Where(s => s.FirstName!.Contains(searchString)
-                 || s.LastName.Contains(searchString));
+                customers = customers.Where(s => s.LastName.Contains(searchString)
+                                       || s.FirstName.Contains(searchString));
             }
             switch (sortOrder)
             {
                 case "name_desc":
                     customers = customers.OrderByDescending(s => s.LastName);
                     break;
-               
-                
+                    
                 default:
                     customers = customers.OrderBy(s => s.LastName);
                     break;
             }
 
-
-            return View(await customers.ToListAsync());
+            int pageSize = 3;
+            return View(await PaginatedList<Customer>.CreateAsync(customers.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Customers/Details/5
