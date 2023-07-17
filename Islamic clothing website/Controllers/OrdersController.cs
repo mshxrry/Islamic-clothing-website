@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Islamic_clothing_website.Areas.Identity.Data;
 using Islamic_clothing_website.Models;
 
 namespace Islamic_clothing_website.Controllers
 {
+    [Authorize]
     public class OrdersController : Controller
     {
         private readonly IslamicClothingContextDb _context;

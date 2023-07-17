@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Islamic_clothing_website.Areas.Identity.Data;
 using Islamic_clothing_website.Models;
 
+
 namespace Islamic_clothing_website.Controllers
 {
+    [Authorize]
     public class CustomersController : Controller
     {
         private readonly IslamicClothingContextDb _context;
