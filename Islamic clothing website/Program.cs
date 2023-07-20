@@ -61,7 +61,7 @@ namespace Islamic_clothing_website
             using (var scope = app.Services.CreateScope())
             {
                 var userManager =
-                    scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+                    scope.ServiceProvider.GetRequiredService<UserManager<IslamicClothingUser>>();
                 var roles = new[] { "Admin", "Customer" };
 
 
@@ -72,8 +72,10 @@ namespace Islamic_clothing_website
                     var user = new IdentityUser();
                     user.UserName = email;
                     user.Email = email;
-
+                    
                    await userManager.CreateAsync(user, password);
+
+                   await userManager.AddToRoleAsync(user, "Admin");
                 }
 
 
