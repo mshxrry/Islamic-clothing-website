@@ -11,7 +11,7 @@ using Islamic_clothing_website.Models;
 
 namespace Islamic_clothing_website.Controllers
 {
-    [Authorize]
+    [Authorize (Roles = "Admin")]
     public class OrdersController : Controller
     {
         private readonly IslamicClothingContextDb _context;
