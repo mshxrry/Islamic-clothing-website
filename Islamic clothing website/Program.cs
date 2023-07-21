@@ -64,12 +64,15 @@ namespace Islamic_clothing_website
                     scope.ServiceProvider.GetRequiredService<UserManager<IslamicClothingUser>>();
                 var roles = new[] { "Admin", "Customer" };
 
-
+                string FirstName = "Administrator";
+                string LastName = "Member";
                 string email = "admin@admin.com";
                 string password = "Test1234,";
                if(await userManager.FindByEmailAsync(email) == null)
                 {
-                    var user = new IdentityUser();
+                    var user = new IslamicClothingUser();
+                    user.LastName = LastName;
+                    user.FirstName = FirstName;
                     user.UserName = email;
                     user.Email = email;
                     
