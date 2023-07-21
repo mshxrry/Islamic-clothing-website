@@ -4,7 +4,7 @@
 
 namespace Islamic_clothing_website.Migrations
 {
-    public partial class pagingincustomer : Migration
+    public partial class user : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

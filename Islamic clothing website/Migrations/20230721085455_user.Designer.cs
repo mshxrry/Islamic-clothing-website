@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Islamic_clothing_website.Migrations
 {
     [DbContext(typeof(IslamicClothingContextDb))]
-    [Migration("20230622215936_paging in customer")]
-    partial class pagingincustomer
+    [Migration("20230721085455_user")]
+    partial class user
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
