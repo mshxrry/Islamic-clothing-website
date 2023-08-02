@@ -8,7 +8,8 @@ namespace Islamic_clothing_website.Models
         public int PaymentId { get; set; }
         [DataType(DataType.Date)]
         public DateTime PaymentDate { get; set; }
-        public int AmountPaid { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal AmountPaid { get; set; }
         public string PaymentType { get; set; }
     }
 }
