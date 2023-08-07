@@ -65,8 +65,8 @@ namespace Islamic_clothing_website
 
                 string FirstName = "Administrator";
                 string LastName = "Member";
-                string email = "admin@admin.com";
-                string password = "Test1234,";
+                string email = "admin@islamicattires.com";
+                string password = "Attires1234,";
                 if (await userManager.FindByEmailAsync(email) == null)
                 {
                     var user = new IslamicClothingUser();
