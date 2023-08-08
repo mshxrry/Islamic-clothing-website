@@ -18,7 +18,7 @@ body {
 }
 /* This code changes the width and height of carousel */
 .carousel-inner {
-    width:1000px;
-    height:1000px;
+    width:700px;
+    height:630px;
     object-fit:cover;
 }
