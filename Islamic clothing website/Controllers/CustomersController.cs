@@ -23,6 +23,7 @@ namespace Islamic_clothing_website.Controllers
         }
 
         // GET: Customers
+        // adds the sorting , pagination and search bar
         public async Task<IActionResult> Index(
       string sortOrder,
       string currentFilter,
@@ -59,7 +60,7 @@ namespace Islamic_clothing_website.Controllers
                     customers = customers.OrderBy(s => s.LastName);
                     break;
             }
-
+            // after 5 people in the data this code will make rest of the data go into a different page
             int pageSize = 5;
             return View(await PaginatedList<Customer>.CreateAsync(customers.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
