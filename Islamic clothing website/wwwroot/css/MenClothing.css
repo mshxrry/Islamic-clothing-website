@@ -1,0 +1,11 @@
+﻿.btn {
+    border-radius: 4px;
+    border: medium solid #000000;
+    background-color: seagreen;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    padding: 5px 30px;
+    margin: 8px 70px;
+}
