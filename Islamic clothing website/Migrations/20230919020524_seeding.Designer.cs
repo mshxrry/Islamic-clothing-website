@@ -4,6 +4,7 @@ using Islamic_clothing_website.Areas.Identity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Islamic_clothing_website.Migrations
 {
     [DbContext(typeof(IslamicClothingContextDb))]
-    partial class IslamicClothingContextDbModelSnapshot : ModelSnapshot
+    [Migration("20230919020524_seeding")]
+    partial class seeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

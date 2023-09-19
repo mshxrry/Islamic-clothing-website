@@ -76,7 +76,7 @@ namespace Islamic_clothing_website
                     user.Email = email;
 
                     await userManager.CreateAsync(user, password);
-
+                    
                     await userManager.AddToRoleAsync(user, "Admin");
                 }
 
