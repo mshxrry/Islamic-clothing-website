@@ -66,6 +66,12 @@ namespace Islamic_clothing_website.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("OrderId,OrderDate,OrderName")] Order order)
         {
+            if(order.OrderDate <= DateTime.Now)
+            {
+                ModelState.AddModelError("", "Please select current date");
+                return View(order);
+            }
+
             if (!ModelState.IsValid)
             {
                 _context.Add(order);

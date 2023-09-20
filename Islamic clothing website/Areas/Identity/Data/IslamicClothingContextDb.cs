@@ -43,6 +43,12 @@ public class IslamicClothingContextDb : IdentityDbContext<IslamicClothingUser>
              new Payment() { PaymentId = 6, PaymentType = "Card", AmountPaid = 10 }
             );
 
+        builder.Entity<Order>().HasData(
+            new Order() { OrderId = 1, OrderName = "Mens Fragrance" },
+            new Order() {  OrderId = 2, OrderName = "Prayer Mats"},
+            new Order() { OrderId = 3, OrderName = "Caps" }
+            );
+
 
         base.OnModelCreating(builder);
         builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
