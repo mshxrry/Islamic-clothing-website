@@ -43,13 +43,13 @@ namespace Islamic_clothing_website.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -133,17 +133,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("Customer");
-
-                    b.HasData(
-                        new
-                        {
-                            CustomerId = 1,
-                            Email = "JosefFatu@mail.com",
-                            FirstName = "Josef",
-                            LastName = "Fatu",
-                            PhoneNumber = "0220567272"
-                        });
+                    b.ToTable("Customer", (string)null);
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Delievery", b =>
@@ -163,7 +153,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("DelieveryId");
 
-                    b.ToTable("Delievery");
+                    b.ToTable("Delievery", (string)null);
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Order", b =>
@@ -183,7 +173,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("OrderId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Order", (string)null);
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Payment", b =>
@@ -206,16 +196,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("PaymentId");
 
-                    b.ToTable("Payment");
-
-                    b.HasData(
-                        new
-                        {
-                            PaymentId = 1,
-                            AmountPaid = 3m,
-                            PaymentDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentType = "Fatu"
-                        });
+                    b.ToTable("Payment", (string)null);
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Product", b =>
@@ -236,7 +217,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Product", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

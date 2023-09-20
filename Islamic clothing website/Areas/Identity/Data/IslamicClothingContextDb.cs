@@ -28,15 +28,19 @@ public class IslamicClothingContextDb : IdentityDbContext<IslamicClothingUser>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<Customer>().HasData(
-            new Customer() { CustomerId = 1, FirstName = "Josef", LastName = "Fatu", PhoneNumber = "0220567272", Email="JosefFatu@mail.com" }
-          
-
+            new Customer() { CustomerId = 1, FirstName = "Josef", LastName = "Fatu", PhoneNumber = "0220567272", Email="JosefFatu@mail.com" },
+            new Customer() { CustomerId = 2, FirstName = "Aayush", LastName = "Bhandari", PhoneNumber = "0210298712", Email = "Aayush21@gmail.com"},
+            new Customer() { CustomerId = 3, FirstName = "Sajal", LastName = "Taneja", PhoneNumber = "021029562", Email = "Sajal092@gmail.com"},
+            new Customer() { CustomerId = 4, FirstName = "Muhammad", LastName = "Shaharyar", PhoneNumber = "0210897166", Email = "shery.08@gmail.com" },
+            new Customer() { CustomerId = 5, FirstName = "Sujal", LastName = "Chand", PhoneNumber = "020295177", Email = "sujal244@outlook.com" }
             );
 
         builder.Entity<Payment>().HasData(
-             new Payment() { PaymentId = 1, PaymentType = "Fatu", AmountPaid = 3 }
-
-
+             new Payment() { PaymentId = 1, PaymentType = "Cash", AmountPaid = 3 },
+             new Payment() { PaymentId = 3, PaymentType = "Card", AmountPaid = 12},
+             new Payment() { PaymentId = 4, PaymentType = "Cash", AmountPaid = 50},
+             new Payment() { PaymentId = 5, PaymentType = "Card", AmountPaid = 75 },
+             new Payment() { PaymentId = 6, PaymentType = "Card", AmountPaid = 10 }
             );
 
 
