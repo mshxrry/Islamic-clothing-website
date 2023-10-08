@@ -35,14 +35,6 @@ public class IslamicClothingContextDb : IdentityDbContext<IslamicClothingUser>
             new Customer() { CustomerId = 5, FirstName = "Sujal", LastName = "Chand", PhoneNumber = "020295177", Email = "sujal244@outlook.com" }
             );
 
-        builder.Entity<Payment>().HasData(
-             new Payment() { PaymentId = 1, PaymentType = "Cash", AmountPaid = 3 },
-             new Payment() { PaymentId = 3, PaymentType = "Card", AmountPaid = 12},
-             new Payment() { PaymentId = 4, PaymentType = "Cash", AmountPaid = 50},
-             new Payment() { PaymentId = 5, PaymentType = "Card", AmountPaid = 75 },
-             new Payment() { PaymentId = 6, PaymentType = "Card", AmountPaid = 10 }
-            );
-
         builder.Entity<Order>().HasData(
             new Order() { OrderId = 1, OrderName = "Mens Fragrance" },
             new Order() {  OrderId = 2, OrderName = "Prayer Mats"},

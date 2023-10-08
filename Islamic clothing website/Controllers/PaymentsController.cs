@@ -60,6 +60,11 @@ namespace Islamic_clothing_website.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PaymentId,PaymentDate,AmountPaid,PaymentType")] Payment payment)
         {
+            if (payment.PaymentDate <= DateTime.Now)
+            {
+                ModelState.AddModelError("", "Please select current date");
+                return View(payment);
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(payment);

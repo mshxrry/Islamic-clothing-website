@@ -43,13 +43,13 @@ namespace Islamic_clothing_website.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -133,7 +133,49 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("Customer", (string)null);
+                    b.ToTable("Customer");
+
+                    b.HasData(
+                        new
+                        {
+                            CustomerId = 1,
+                            Email = "JosefFatu@mail.com",
+                            FirstName = "Josef",
+                            LastName = "Fatu",
+                            PhoneNumber = "0220567272"
+                        },
+                        new
+                        {
+                            CustomerId = 2,
+                            Email = "Aayush21@gmail.com",
+                            FirstName = "Aayush",
+                            LastName = "Bhandari",
+                            PhoneNumber = "0210298712"
+                        },
+                        new
+                        {
+                            CustomerId = 3,
+                            Email = "Sajal092@gmail.com",
+                            FirstName = "Sajal",
+                            LastName = "Taneja",
+                            PhoneNumber = "021029562"
+                        },
+                        new
+                        {
+                            CustomerId = 4,
+                            Email = "shery.08@gmail.com",
+                            FirstName = "Muhammad",
+                            LastName = "Shaharyar",
+                            PhoneNumber = "0210897166"
+                        },
+                        new
+                        {
+                            CustomerId = 5,
+                            Email = "sujal244@outlook.com",
+                            FirstName = "Sujal",
+                            LastName = "Chand",
+                            PhoneNumber = "020295177"
+                        });
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Delievery", b =>
@@ -153,7 +195,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("DelieveryId");
 
-                    b.ToTable("Delievery", (string)null);
+                    b.ToTable("Delievery");
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Order", b =>
@@ -173,7 +215,27 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("OrderId");
 
-                    b.ToTable("Order", (string)null);
+                    b.ToTable("Order");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderId = 1,
+                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderName = "Mens Fragrance"
+                        },
+                        new
+                        {
+                            OrderId = 2,
+                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderName = "Prayer Mats"
+                        },
+                        new
+                        {
+                            OrderId = 3,
+                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderName = "Caps"
+                        });
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Payment", b =>
@@ -196,7 +258,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("PaymentId");
 
-                    b.ToTable("Payment", (string)null);
+                    b.ToTable("Payment");
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Product", b =>
@@ -217,7 +279,7 @@ namespace Islamic_clothing_website.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.ToTable("Product", (string)null);
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
