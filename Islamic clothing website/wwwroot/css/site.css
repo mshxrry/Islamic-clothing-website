@@ -35,7 +35,7 @@ body {
         position: relative;
         display: inline-block;
     }
-
+    /* Changes the aesthetics of the dropdown*/
     .dropdown-menu {
         display: none;
         position: absolute;
