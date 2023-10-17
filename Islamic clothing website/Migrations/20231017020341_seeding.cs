@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Islamic_clothing_website.Migrations
 {
-    public partial class seeded : Migration
+    public partial class seeding : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,16 +39,6 @@ namespace Islamic_clothing_website.Migrations
                     { 4, null, "shery.08@gmail.com", "Muhammad", "Shaharyar", null, "0210897166" },
                     { 5, null, "sujal244@outlook.com", "Sujal", "Chand", null, "020295177" }
                 });
-
-            migrationBuilder.InsertData(
-                table: "Order",
-                columns: new[] { "OrderId", "OrderDate", "OrderName" },
-                values: new object[,]
-                {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Mens Fragrance" },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Prayer Mats" },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Caps" }
-                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -78,21 +67,6 @@ namespace Islamic_clothing_website.Migrations
                 table: "Customer",
                 keyColumn: "CustomerId",
                 keyValue: 5);
-
-            migrationBuilder.DeleteData(
-                table: "Order",
-                keyColumn: "OrderId",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Order",
-                keyColumn: "OrderId",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "Order",
-                keyColumn: "OrderId",
-                keyValue: 3);
 
             migrationBuilder.AlterColumn<string>(
                 name: "LastName",

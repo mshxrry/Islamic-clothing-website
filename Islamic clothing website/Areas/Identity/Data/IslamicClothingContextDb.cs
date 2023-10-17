@@ -35,11 +35,7 @@ public class IslamicClothingContextDb : IdentityDbContext<IslamicClothingUser>
             new Customer() { CustomerId = 5, FirstName = "Sujal", LastName = "Chand", PhoneNumber = "020295177", Email = "sujal244@outlook.com" }
             );
 
-        builder.Entity<Order>().HasData(
-            new Order() { OrderId = 1, OrderName = "Mens Fragrance" },
-            new Order() {  OrderId = 2, OrderName = "Prayer Mats"},
-            new Order() { OrderId = 3, OrderName = "Caps" }
-            );
+      
 
 
         base.OnModelCreating(builder);

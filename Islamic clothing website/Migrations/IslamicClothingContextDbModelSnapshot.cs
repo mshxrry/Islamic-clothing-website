@@ -216,26 +216,6 @@ namespace Islamic_clothing_website.Migrations
                     b.HasKey("OrderId");
 
                     b.ToTable("Order");
-
-                    b.HasData(
-                        new
-                        {
-                            OrderId = 1,
-                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderName = "Mens Fragrance"
-                        },
-                        new
-                        {
-                            OrderId = 2,
-                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderName = "Prayer Mats"
-                        },
-                        new
-                        {
-                            OrderId = 3,
-                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderName = "Caps"
-                        });
                 });
 
             modelBuilder.Entity("Islamic_clothing_website.Models.Payment", b =>
