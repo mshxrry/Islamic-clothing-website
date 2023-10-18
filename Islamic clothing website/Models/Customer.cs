@@ -6,9 +6,9 @@ namespace Islamic_clothing_website.Models
     public class Customer
     {
         public int CustomerId { get; set; }
-        [Display(Name ="First Name")]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
-        [Display(Name ="Last Name")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
         // This makes the phone number field required 
         [Required(ErrorMessage = "Mobile no. is required")]
