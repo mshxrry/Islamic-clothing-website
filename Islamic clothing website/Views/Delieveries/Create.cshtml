@@ -14,7 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DelieveryDate" class="control-label"></label>
-                <input asp-for="DelieveryDate" class="form-control" />
+                <input asp-for="DelieveryDate" type="date" min="2023-10-25" max="2030-01-01" />
                 <span asp-validation-for="DelieveryDate" class="text-danger"></span>
             </div>
             <div class="form-group">

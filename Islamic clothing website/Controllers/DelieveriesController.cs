@@ -60,8 +60,14 @@ namespace Islamic_clothing_website.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DelieveryId,DelieveryDate,DelieveryAddress")] Delievery delievery)
         {
+            if (delievery.DelieveryDate <= DateTime.Now)
+            {
+                ModelState.AddModelError("", "Please select current date");
+                return View(delievery);
+            }
             if (!ModelState.IsValid)
             {
+
                 _context.Add(delievery);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
